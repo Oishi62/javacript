@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Klee+One&display=swap" rel="stylesheet">
+    <title>Quiz</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            
+        }
+        body{
+            background: linear-gradient(to left,#dd5e89, #f7bb97);
+            font-family: 'Klee One';
+            font-weight: bold;
+        }
+        #outside{
+            margin-left:400px;
+        }
+        .diva{
+            text-align: center;
+            background: linear-gradient(to right,#de6262 , #ffb88c);
+            width:500px;
+            border:8px outset  #f45c43;
+            height:200px
+        }
+    
+        hr{
+            border-style: dotted none none none;
+            height:0;
+            border-width: thick;
+            border-color:black;
+            margin:0 auto 0 auto;
+        }
+        .diva:hover{
+            box-shadow: 0 0 8px 8px rgb(250, 21, 21);
+            width:520px;
+            height:220px;
+        }
+    </style>
+    <script>
+
+            function quiz()
+            {
+                var q1,q2,a1,a2,responce1,responce2,c=0,x="";
+                q1="What is 8+2?";
+                a1="10";
+                q2="What is the longest river in the world?";
+                a2="NILE";
+                responce1=prompt(q1,"");
+                if(responce1==a1)
+                c=c+5;
+                responce2=prompt(q2,"");
+                if(responce2.toUpperCase()==a2)
+                c=c+5;
+                x="Your total score is "+c+" out of 10";
+                document.getElementById("Answer").innerHTML=x;
+            }
+        
+    </script>
+</head>
+<body id="body">
+
+    <br><br>
+    <hr style="width:60%">
+    <h1 style="text-align: center;color:red;">ATTEMPT THIS QUIZ</h1><br>
+    <hr style="width:40%"><br><br>
+    <div id="outside">
+    <div class="diva">
+        <br><br><br><br>
+        <button onclick="quiz()" style="font-family: 'Klee One';font-weight:bold;border:2px dotted black;width:200px;"> Start Quiz</button><br><br>
+        <p id="Answer"></p>
+    </div><br><br>
+    </div>
+</body>
+</html>

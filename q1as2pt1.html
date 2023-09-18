@@ -1,0 +1,120 @@
+<html>
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=-9LJxSLwLi3dKPPRuWujIXBP-TGm3_8knqQm4u9MC5JhRsGJuWOELkfAMYruXK3O3TxGEy17UuVCUo75YPBnhpTgNOdx1PytzLvXx4CUuIcMYUWT3nFUAajcvBLThLliBxfWTxYWMsTgmS6Hpl_s2EGMEF8g0XULw7ByXxUoKOsIUso3PVL_elnC4Y-7uorulC23IeORqDkHRoRlplD-rzFCV_EjNdf9aB8lLSToQBHLSPd0mI09Wniuk72YWM_Q_lRncnbzmmD4Ho-Bmld0-LCPnnPJEOrFEFdt3TnagSZiQSySogCVv8tBpnmNCRWumyKc1Uy25eA73U93HDmD4d4ZFxLg71LqJOl7UrJ1bLOQRzA9-vIG3ArzsPyeFQA7WTIr5TwD0fHHF-rE3g7Efju6ovOScde7E-2jTypab5fzbBgnvzXljOumZO6ElxAXX587hbOqy6RUNEUAWKQDrXMMbqOQzjHMC47v28CVEvwnHc20MELSt2bUETwEAUOQrnl4vAColBnvJC1Rl86A8mufd3GnsCre64x-4HKumX-6CNNbayU9iO1fAjRMLp7o-OkM5n3-JUlEFtiapooLt01ywStmP291Hay2sNZPqwgEvEmLRP_qtiTVMHWkLhfxhpgcJnpr_Np7ZFXirKK_ArudaFXUdExvxnYmDLdKktqvD6WIAy_x6ek1mdrV8oUC8deKE27LvjKmsY48ABZMBJH7WAiW-Fe8L3Rd1SQi6w-IIbeP1qRkTyyRZoHshT7UM9-bcsRKIBAwQc1qAlwI9lSFhQCZFftYD0cZIBX27czrTkKFN9RJT7emW-jQDVoYjmD9fv_3gE-nZVYImj6WBMZvu8_0ebhu-ZAnYqzB0NlkuZiMxIn70eZX0VdXDMK5yphxL8xpj1TiAH-1D7xYugBQYzQwqpsEllk999UuxLoHiZdu6GTIU0-esrMoVBaNMi2cOkHBUWMw7IgegfFZDi0-DPbpoE_rWAbTGFuZhIx_bA1Zbzj37uCQ8RGONehuONflYpaKwDuLwijSVufTLFhVGhqoQHPobDxG71Z415sk6ehcd8KdNizkaoqH8IkeQdQsbMIv9OI7uQPTsZZxjqJut6fXLuEHPjMxrJsU6e0oSneeub2dcQn5-sfK-C49P1lJUtSzf3IbQmPG2itExU46dVCOlfDY1Uhy-3XmosCnj62O7GWllns0-LPUsNUGV0Vx1V4ABLrXtRbY5Nx5GEc2NoZ_h8W1mjK8aBUDEDj78NH_oNmtEIqfdWpPHZ4syc-lI9CHQmQyhIpNCrUXHXt5Ar-BnV3I-gyRFfLnk3Y" nonce="305670a0f788149a847275ca287caf93" charset="UTF-8"></script><!q1as2pt1.html : Write a program in HTML, JavaScript 
+to convert any +ve integer(1-9999999) to corresponding word>
+<head><title>To convert number to words</title>
+<script>
+	function num_to_word()
+	{
+	var n1,n2,i;
+	n1=parseInt(form1.n1.value);
+	n2=parseInt(form1.n2.value);
+	document.write("<body bgcolor=#00aa55>");
+	document.write("<font face=times new roman size=10 color=#000000>");
+		for(i=n1;i<=n2;i++)
+		{
+		numword(i);
+		}
+	}
+	
+	function numword(n)
+	{
+	var nlkh,nlkh1,nlkh2,nth,nth1,nth2,nh,nt1,nt2;
+	var word="";
+	var m;
+	var a=["Zero","One","Two","Three","Four","Five","Six","Seven",
+	"Eight","Nine","Ten","Eleven","Twelve","Thirteen","Fourteen",
+	"Fifteen","Sixteen","Seventeen","Eighteen","Nineteen"];
+	var b=["x","x","Twenty","Thirty","Forty","Fifty","Sixty",
+	"Seventy","Eighty","Ninety"];
+	m=n; // copying n to m
+	//To extract digits from lakh place
+	nlkh=parseInt(n/100000);
+		if(nlkh<=19){
+		nlkh1=0;
+		nlkh2=nlkh;
+		}
+		else{
+		nlkh1=parseInt(nlkh/10);
+		nlkh2=nlkh%10;
+		}
+	//alert("nlkh="+nlkh+" nlkh1="+nlkh1+" nlkh2="+nlkh2);
+	//To extract digits from thousand place
+	n=n%100000;
+	nth=parseInt(n/1000);
+		if(nth<=19){
+		nth1=0;
+		nth2=nth;
+		}
+		else{
+		nth1=parseInt(nth/10);
+		nth2=nth%10;
+		}
+	//To extract digits from hundredth place
+	n=n%1000;
+	nh=parseInt(n/100);
+	
+	//To extract digits from tens place and from unit place
+	n=n%100;
+		if(n<=19){
+		nt1=0;
+		nt2=n;
+		}
+		else{
+		nt1=parseInt(n/10);
+		nt2=n%10;
+		}
+	//alert("nlkh1="+nlkh1+" nlkh2="+nlkh2+" nth1="+nth1+" nh="+nh+" nt1="+nt1+" nt2="+nt2);
+	//To convert number to words  : Lakh order
+		if(nlkh1!=0 && nlkh2!=0){
+		word=word.concat(b[nlkh1]," ",a[nlkh2]," Lakh ");
+		}
+		else if(nlkh1!=0 && nlkh2==0){
+		word=word.concat(b[nlkh1]," Lakh ");
+		}
+		else if(nlkh1==0 && nlkh2!=0){
+		word=word.concat(a[nlkh2]," Lakh ");
+		}
+		
+	//To convert number to words  : Thousand order
+		if(nth1!=0 && nth2!=0){
+		word=word.concat(b[nth1]," ",a[nth2]," Thousand ");
+		}
+		else if(nth1!=0 && nth2==0){
+		word=word.concat(b[nth1]," Thousand ");
+		}
+		else if(nth1==0 && nth2!=0){
+		word=word.concat(a[nth2]," Thousand ");
+		}
+	//To convert number to words : Hundred order
+	
+		if(nh!=0){
+		word=word.concat(a[nh]," Hundred ");
+		}
+		
+	//To Convert number to words : Tens place and unit place
+	
+		if(nt1!=0 && nt2!=0){
+		word=word.concat(b[nt1]," ",a[nt2]);
+		}
+		else if(nt1!=0 && nt2==0){
+		word=word.concat(b[nt1]);
+		}
+		else if(nt1==0 && nt2!=0){
+		word=word.concat(a[nt2]);
+		}
+	document.write(m," : ",word,"<br>");
+	}
+
+</script>
+</head>
+<body bgcolor=#00aa55>
+<font face=times new roman size=10 color=#000000>
+<form name=form1>
+<center><u>To Convert Number to Words</u></center>
+<pre>Enter n1(1-9999999)=<input type=number name=n1 size=10>
+<pre>Enter n2(1-9999999)=<input type=number name=n2 size=10>
+<pre><input type=button value=NUM_TO_WORD onclick="num_to_word();">
+<pre><input type=reset value=RESET>
+</form>
+</body>
+</html>

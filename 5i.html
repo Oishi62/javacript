@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Klee+One&display=swap" rel="stylesheet">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            
+        }
+        body{
+            background: linear-gradient(to left,#dd5e89, #f7bb97);
+            font-family: 'Klee One';
+            font-weight: bold;
+        }
+        #outside{
+            margin-left:400px;
+        }
+        .diva{
+            text-align: center;
+            background: linear-gradient(to right,#de6262 , #ffb88c);
+            width:500px;
+            border:8px outset  #f45c43;
+            height:200px;
+        }
+    
+        hr{
+            border-style: dotted none none none;
+            height:0;
+            border-width: thick;
+            border-color:black;
+            margin:0 auto 0 auto;
+        }
+        .diva:hover{
+            box-shadow: 0 0 8px 8px rgb(250, 21, 21);
+            width:520px;
+            height:220px;
+        }
+    </style>
+
+    <script>
+        function exp1()
+        {
+            var x,y,i;
+            for(i=1;i<=20;i++)
+            {
+                x=i*.1;
+                y=expx(x);
+                alert("x="+x+" exp(x)="+y);
+            }  
+        }
+        function expx(x)
+        {
+            var ce,fact,px,n,pe,eps;
+            ce=1;
+            eps=1;
+            fact=1;
+            n=1;
+            px=1;
+            while(eps>1e-12)
+            {
+                fact=fact*n;
+                px=px*x;
+                eps=px/fact;
+                ce=ce+eps;
+                n=n+1;
+            }
+            return ce;
+        }
+    </script>
+</head>
+<body>
+    <br><br>
+    <hr style="width:60%">
+    <h1 style="text-align: center;color:red;">ASSIGNMENT 1</h1><br>
+    <hr style="width:40%"><br><br>
+    <div id="outside">
+    <div class="diva">
+    <form action="post" name="Form">
+        <h3>QUESTION 5i:</h3><br><br>
+        Enter the value of x <input type="number" name="T1"><br><br>
+        <input type="button" value="Display" style="font-family: 'Klee One';font-weight:bold;border:2px dotted black;width:200px;" onclick="exp1()">  <br><br>
+        <input type="reset" style="font-family: 'Klee One';font-weight:bold;border:2px dotted black;width:200px;" value="RESET">
+
+    </form>
+    </div><br><br>
+    </div>
+</body>
+</html>

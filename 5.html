@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Clock</title>
+</head>
+<body onload="open_clock()">
+    <script>
+        function open_clock()
+        {
+            var w = screen.width/2-300;
+            var h = screen.height/2-250;
+            var win=open("systime.html","_blank",width=80,height=80);
+            win.moveTo(w,h);
+            window.close();
+        }
+    </script>
+</body>
+</html>

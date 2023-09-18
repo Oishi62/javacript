@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeClock</title>
+    <style>
+        div {
+                width: 400px;
+                padding: 30px;
+                margin-top: 50px;
+                margin-bottom: 200px;
+                margin-left: auto;
+                margin-right: auto;
+                border: 6px solid #B2C248;
+                border-radius: 25px;
+                text-align: center;
+                font-family: comic sans ms;
+                font-size: 25px;
+                letter-spacing: 10px;
+                color: green;
+            }
+        div:hover{
+                    box-shadow: 4px 8px 4px 8px rgb(115, 130, 115);
+                 }
+    </style>
+</head>
+<body onload="startTime()" style="background-color: #B4CEFC;">
+    <p style="margin-top:100px;"><font face="comic sans ms" color="green" size="10"><center>Time is:</center></font></p>
+    <div id="demo"></div>
+    <script>
+        function startTime()
+        {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m=checktime(m);
+            s=checktime(s);
+            document.getElementById('demo').innerHTML=h + " : " + m + " : " + s;
+            setTimeout(startTime,1000);
+        }
+        function checktime(x)
+        {
+            if(x<10)
+                x = "0" + x;
+            return x;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leap Year</title>
+    <script>
+        function leap_yr()
+        {
+            var y=parseInt(Form.T1.value);
+            if(y % 400 == 0)
+                document.getElementById('demo').innerHTML += y + ' is a leap year.<br>';
+            else if(y % 100 == 0)
+                document.getElementById('demo').innerHTML += y + ' is not a leap year.<br>';
+            else if(y % 4 == 0)
+                document.getElementById('demo').innerHTML += y + ' is a leap year.<br>';
+            else
+                document.getElementById('demo').innerHTML += y + ' is not a leap year.<br>';
+        }
+    </script>
+    <style>
+        div {
+                width: 800px;
+                padding: 20px;
+                background-color: #AAF1D0;
+                margin-top: 100px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 200px;
+                border: 6px solid #B2C248;
+                border-radius: 25px;
+                text-align: center;
+                font-family: comic sans ms;
+                font-size: 20px;
+                letter-spacing: 5px;
+                color: green;
+            }
+        div:hover {
+                        box-shadow: 4px 8px 4px 8px rgb(100, 125, 100);
+                  }
+        p {
+                color: rgb(220, 72, 121);
+          }
+    </style>
+</head>
+<body bgcolor="#B4CEFC">
+    <div>
+        <form id="Form" action="POST">
+            <center>
+                <label for="T1">Enter A Year:</label>
+                <input type="text" name="T1" id="text" size="30" style="margin-left: 30px;">
+                <br><br>
+                <input type="button" value="Check whether leap year or not" onclick="leap_yr();" style="margin-right: 30px;background-color: rgb(102, 176, 102);">
+                <input type="reset" value="Reset" style="background-color: rgb(73, 59, 155);">
+                <p id="demo"></p>
+            </center>
+        </form>
+</body>
+</html>

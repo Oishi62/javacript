@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heading</title>
+    <script>
+        function headings()
+        {
+            document.getElementById('demo').innerHTML+='<h1><u>h1</u> : Welcome To My Webpage!!</h1>';
+            document.getElementById('demo').innerHTML+='<h2><u>h2</u> : Welcome To My Webpage!!</h2>';
+            document.getElementById('demo').innerHTML+='<h3><u>h3</u> : Welcome To My Webpage!!</h3>';
+            document.getElementById('demo').innerHTML+='<h4><u>h4</u> : Welcome To My Webpage!!</h4>';
+            document.getElementById('demo').innerHTML+='<h5><u>h5</u> : Welcome To My Webpage!!</h5>';
+            document.getElementById('demo').innerHTML+='<h6><u>h6</u> : Welcome To My Webpage!!</h6>';
+        }
+    </script>
+    <style>
+        div {
+                background-color: #AAF1D0;
+                width: 600px;
+                padding: 20px;
+                margin-top: 100px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 200px;
+                border: 6px solid #B2C248;
+                border-radius: 25px;
+                text-align: justify;
+                letter-spacing: 5px;
+                color: green;
+            }
+        div:hover {
+                        box-shadow: 4px 8px 4px 8px rgb(100, 125, 100);
+                  }
+        u {
+                color: red;
+          }
+    </style>
+</head>
+<body bgcolor="#B4CEFC">
+    <div id="demo">
+        <form id="Form" action="POST">
+            <center>
+                <input type="button" id="demo" value="Show All The 6 Levels of HTML Headings" onclick="headings();">
+                
+            </center>
+        </form> 
+    </div>
+</body>
+</html>

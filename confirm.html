@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+</head>
+<body>
+    Click it to confirm
+    <button onclick="displaymessage()">Try It </button>
+    <p id="demo"></p>
+    <script type="text/javascript"> 
+        // You can also write language=JavaScript 
+        function displaymessage()
+        {
+            var r,x;
+            r=confirm("Press a button");   // 1=ok 0=cancel
+            if(r==true)
+            {
+                x="You pressed ok";
+            }
+            else
+            {
+                x="You pressed cancel";
+            }
+            document.getElementById("demo").innerHTML=x;
+        }
+        
+        </script>
+</body>
+</html>

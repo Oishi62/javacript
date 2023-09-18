@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Month</title>
+    <script>
+        function random_no()
+        {
+            var x = Math.random();
+            x = Math.round(x*12);
+            document.getElementById('text').setAttribute("value",x);
+        } 
+        function months()
+        {
+            var m,month;
+            m = parseInt(Form.T1.value);
+            switch (m) 
+            {
+                case 1:
+                    month="January";
+                    break;
+                case 2:
+                    month="February";
+                    break;
+                case 3:
+                   month="March";
+                   break;
+                case 4:
+                    month="April";
+                    break;
+                case 5:
+                   month="May";
+                   break;
+                case 6:
+                   month="June";
+                   break;
+                case 7:
+                    month="July";
+                    break;
+                case 8:
+                   month="August";
+                   break;
+                case 9:
+                    month="September";
+                    break;
+                case 10:
+                    month="October";
+                    break;
+                case 11:
+                    month="November";
+                    break;
+                case 12:
+                    month="December";
+                    break;
+                default:
+                    alert("Invalid Random Number Is Generated.");
+                    break;
+            }
+            alert("The Corresponding Month is: "+month);
+        }
+    </script>
+    <style>
+        div {
+                width: 600px;
+                padding: 20px;
+                background-color: #AAF1D0;
+                margin-top: 200px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 200px;
+                border: 6px solid #B2C248;
+                border-radius: 25px;
+                text-align: center;
+                font-family: comic sans ms;
+                font-size: 25px;
+                letter-spacing: 5px;
+                color: green;
+            }
+        div:hover {
+                        box-shadow: 4px 8px 4px 8px rgb(100, 125, 100);
+                  }
+    </style>
+</head>
+<body bgcolor="#B4CEFC">
+    <div>
+        <form id="Form" action="POST">
+            <center>
+                <label for="t1">The Random Number Generated Between 1 And 12 Is:</label>
+                <input type="text" name="T1" id="text" size="30" style="margin-left: 30px;">
+                <br><br>
+                <input type="button" value="Generate Random Number" onclick="random_no();" style="margin-right: 30px;">
+                <input type="button" value="Display The Corresponding Month" onclick="months();">
+            </center>
+        </form>
+    </div>
+</body>
+</html>

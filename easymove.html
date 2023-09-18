@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Klee+One&display=swap" rel="stylesheet">
+    <title>Sort</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            
+        }
+        body{
+            background: linear-gradient(to left,#dd5e89, #f7bb97);
+            font-family: 'Klee One';
+            font-weight: bold;
+        }
+        #outside{
+            margin-left:400px;
+        }
+        .diva{
+            text-align: center;
+            background: linear-gradient(to right,#de6262 , #ffb88c);
+            width:500px;
+            border:8px outset  #f45c43;
+            height:300px;
+        }
+    
+        hr{
+            border-style: dotted none none none;
+            height:0;
+            border-width: thick;
+            border-color:black;
+            margin:0 auto 0 auto;
+        }
+        .diva:hover{
+            box-shadow: 0 0 8px 8px rgb(250, 21, 21);
+            width:520px;
+            height:320px;
+        }
+    </style>
+    
+    
+</head>
+<body>
+    <br><br>
+    <hr style="width:60%">
+    <h1 style="text-align: center;color:red;">DEMO EXAMPLE</h1><br>
+    <hr style="width:40%"><br><br>
+    <div id="outside">
+    <div class="diva">
+
+    
+        <h3>QUESTION 2:</h3><br><br>
+        Enter a number/name <input type="text" id="T1" maxLength="5" onkeyup="jump001(this,'T2')"> <br><br>
+        Enter a number/name <input type="text" id="T2" maxLength="5" onkeyup="jump001(this,'T3')"> <br><br>
+        Enter a number/name <input type="text" id="T3" maxLength="5" onkeyup="jump001(this,'T4')"> <br><br>
+        Enter a number/name <input type="text" id="T4" maxLength="5" onkeyup="jump001(this,'T5')"> <br><br>
+        Enter a number/name <input type="text" id="T5" maxLength="5" onkeyup="jump001(this,'T1')"> <br><br>
+        
+   
+    <script>// <script src="external.js"><//script> external javascript
+        window.onload=function(){
+            T1.value="";
+            T2.value="";
+            T3.value="";
+            T4.value="";
+            T5.value="";
+        }
+        function jump001(field,autoMove)
+        {
+            if(field.value.length>= field.maxLength)
+            {
+                document.getElementById(autoMove).focus();
+            }
+        }
+    </script>
+     </div><br><br>
+    </div>
+</body>
+</html>

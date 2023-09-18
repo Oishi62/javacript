@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SlideShow</title>
+    <style>
+        img {
+                margin-bottom: 100px;
+                border: 8px solid maroon;
+                border-radius: 25px;
+            }
+        img:hover {
+                        box-shadow: 6px 8px 6px 8px rgb(87, 119, 87);
+                  }
+        p {
+                margin-top: 50px;
+                margin-bottom: 50px;
+                color: maroon;
+                font-size: 50px;
+                text-decoration: underline;
+           }
+    </style>
+</head>
+<body onload="change_img()" style="background-color: beige;">
+    <center>
+        <p>SLIDE-SHOW</p>
+        <img name="slide" height="400" width="600">
+    </center>
+    <script>
+        var i=0,t=2000;
+        var images = [];
+        images[0]="img 1.jpg";
+        images[1]="img 2.jpg";
+        images[2]="img 3.jpg";
+        images[3]="img 4.jpg";
+        images[4]="img 5.jpg";
+        function change_img()
+        {
+            document.slide.src = images[i];
+            if(i < images.length - 1)
+                i++;
+            else
+                i=0;
+            setTimeout("change_img()",t);
+        }
+    </script>
+</body>
+</html>

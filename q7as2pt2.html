@@ -1,0 +1,46 @@
+<html>
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=HOgZJXSbFqE09zw_8uQXvRQfBH8yqai3B9X_B8QWCGbH7pnbjKBK2J7G-aKxdwL7VJeEdRDtuc3zVvfOv-RywVbzcaGvTRnKTgz3LJozja-sNC1c7tihPCAjqXitGdmoH8jTxmhCqWwei-QvR1uwdH-g1XVj-aN6tH1HH7-4MhgsevMvca6Rl8ifIQgpCqsZvPqXfKoppn839I4RhcFr83zLtPADaTo0fvu7pEwP3tZG3nabxN7wOw9oAhFGEauhUaiGe5e7oQvoJCkh00iRK12_mO-e7JpOzH8Fr-59lMjnPUT0JkWWy8g6Qt3FNePoA632D4j_NXqQFVsE6M94ImtXyp3tf6jmuZ4YnxFDzvWjamNsitoNKCC0WHpqSESwk4U2YfBTUXisxqX2N3BifKFjIGXClxBit8SoLdyC4PxBfGDTUkb3ZRujXVNvTQze3zc0mWEzNlj9gmwUClK-CKZ-xNDwYk1SXiop21KDyb5s0UrdoaiRfbam-tH7ihy7hGOiY1O3Asd8LYkCLZ5gmReIJYJhofHmK2DVVSU5d4Dc9RPpntU4RBMg-NxnMpSjlLf2J-RRrCpmdqXEtZKeCY-wwNM9jCcTfCrXpigJ1m_sIx_un5-di3PuY6U0NpnvHQ4ygzs-WnH9iJ_aFZ4aW1uiRnTRtinTnDI9sbJqMklF5IgjOVghg8tnp-vTv8O-3AxAsPnCVZ1u6OjACMiCNvOZ8CHcRWC3A3wUn7YiCqjx2GLaCtY2mflyGjSR7KMbfmz64SO8Go4yXQIlcJset6B_NNlrwl5q2Dm7Iq8BKouMARBTlY-6lGRYgFdBvVJbr4W6cMQ0woZ_DME1rWohVklGFP9W5UYEtYTJqH_3YIlb6oreZYsMgOPUOh-g1oylDxzLv8FQ_yeb2yk3wbu2T0V2jH4lfbpu7VEYyh2F91l0R3ocgWP6GLfw5ycMNZrWh5wOvxk7S9lBk2z0a9FGbJevivbxOLtKoCSt9Az-CJaiSuReZ5iSEvXVLlGZUE13OQH28GBzIdXN0j3GEAB4PVb-8DDAVD_s7v3KYPUZkEUSCqzYh30j-OpEzdEeeLq7-1jBNEktmUEsVQrZHOmeZBVqKs317sfy6ChceuhMpZeOa4gKs0JaVa4SOH7Qn2--UiMULPiD7s0lpLLJGzYLmu3TnBkDdki_gs3jHP5J0enwtDJXbgNNNiWv6QviGRdh8-pnegRPrXfzF8SV1OsNlSZzrpLahPuxIIG1uQ_PyOLLl4QS6s0WKTIiHBektOe-rbwN6_mcUqkFMIdjrdFDuMkFJqMtgGQC5Ai_q8akiXk" nonce="5488f065557a56410017a2152f4e299c" charset="UTF-8"></script><!q7as2pt2.html : Write html code, Java Script to implement 
+Towers of Hanoi Algorithm to shift 'nd' disks from Peg-1 to Peg-2>
+<head><title>To implement Towers of Hanoi Algorithm</title>
+<script>
+	var n=0;
+	function towers_of_hanoi()
+	{
+	var nd,p1=1,p2=2,p3=3;
+	nd=form1.nd.value;
+	document.write("<body bgcolor=#00aa55>");
+	document.write("<font face=times new roman size=6 color=#000000>");
+	document.write("Output of Towers of Hanoi Problem, nd=",nd,"<br><br>");
+	hanoi(nd,p1,p2,p3);
+	document.write("Total number of Operations performed=",n);
+	}
+	
+	function hanoi(nd,p1,p2,p3)
+	{
+		if(nd==1)
+		{
+		n++;
+		document.write("Step-",n," : "," Move Disk-",nd," From Peg-",p1," To Peg-",p2,"<br>" );
+		return;
+		}
+		else
+		{
+		hanoi((nd-1),p1,p3,p2);
+		n++;
+		document.write("Step-",n," : "," Move Disk-",nd," From Peg-",p1," To Peg-",p2,"<br>" );
+		hanoi((nd-1),p3,p2,p1);
+		}
+	}
+	
+</script>
+</head>
+<body bgcolor=#00aa55>
+<font face=times new roman size=6 color=#000000>
+<center><u>To Implement Towers of Hanoi Problem</u></center>
+<form name=form1>
+<pre>Enter Number of Disks(2-10)=<input type=number name=nd size=5>
+<pre><input type=button value=TOWERS_OF_HANOI onclick="towers_of_hanoi();">
+<pre><input type=RESET value=RESET>
+</form>
+</body>
+</html>

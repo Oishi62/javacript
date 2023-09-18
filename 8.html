@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Change</title>
+    <script>
+        function f1()
+        {
+            document.getElementById("body").style.background="Pink";
+        }
+        function f2()
+        {
+            document.getElementById("body").style.background="#E6E6FA";
+        }
+        function f3()
+        {
+            document.getElementById("body").style.background="Cyan";
+        }
+        function f4()
+        {
+            document.getElementById("body").style.background="Yellow";
+        }
+    </script>
+    <style>
+        div {
+                width: 800px;
+                padding: 20px;
+                background-color: #AAF1D0;
+                margin-top: 100px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 200px;
+                border: 6px solid maroon;
+                border-radius: 25px;
+                text-align: center;
+                font-family: comic sans ms;
+                font-size: 20px;
+                letter-spacing: 5px;
+                color: green;
+            }
+        div:hover {
+                        box-shadow: 4px 8px 4px 8px rgb(235, 155, 115);
+                  }
+    </style>
+</head>
+<body id="body" bgcolor="#B4CEFC">
+    <div>
+        <form id="Form" action="POST">
+            <center>
+                <h1>Choose Any One Of The Following Buttons To Change Background Colour</h1>
+                <br>
+                <input type="button" value="Pink" onmouseover="f1();" style="margin-right: 30px;letter-spacing: 16px;font-weight:  bold;">
+                <input type="button" value="Lavender" onmouseover="f2();" style="letter-spacing: 16px;font-weight: bold;">
+                <br><br>
+                <input type="button" value="Cyan" onmouseover="f3();" style="margin-right: 30px;letter-spacing: 16px;font-weight:  bold;"">
+                <input type="button" value="Yellow" onmouseover="f4();" style="letter-spacing: 16px;font-weight: bold;">
+            </center>
+        </form>
+    </div>
+</body>
+</html>

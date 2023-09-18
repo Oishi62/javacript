@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body onload="resize()">
+    <script>
+        function resize()
+        {
+            var w=screen.width/2-80;
+            var h=screen.height/2-80;
+            var win=open("date.html","_blank","width=160,height=160");
+            win.moveTo(w,h);
+            window.close();
+        }
+    </script>
+</body>
+</html>

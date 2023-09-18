@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime And Fibonacci</title>
+    <script>
+        function isperfectsquare(x)
+        {
+            var s,f1=0;
+            s=parseInt(Math.sqrt(x));
+            if(s * s == x)
+                f1 = 1;
+            else
+                f1=0;
+            return f1;
+        }
+        function isfibonacci(y)
+        {
+            var f2=0,a,b;
+            a=isperfectsquare(5 * y * y + 4);
+            b=isperfectsquare(5 * y * y - 4);
+            if(a == 1 || b == 1)
+                f2=1;
+            else
+                f2=0;
+            return f2;
+        }
+        function isprime(z)
+        {
+            var i,f3=1,z1,r;
+            z1=parseInt(z/2);
+            if(z==0 || z==1)
+                f3=0;
+            for(i=2;i<=z1;i++)
+            {
+                r = z % i;
+                if(r==0)
+                {
+                    f3=0;
+                    break;
+                }
+            }
+            return f3;
+        }
+        function fibon_prime()
+        {
+            var n1,n2,p=0,f=0,i;
+            n1=parseInt(Form.T1.value);
+            n2=parseInt(Form.T2.value);
+            document.getElementById('demo').innerHTML+="The Numbers which are both Prime and Fibonacci between "+n1+" and "+n2+" are:<br>";
+            for(i=n1;i<=n2;i++)
+            {
+                p=isprime(i);
+                f=isfibonacci(i);
+                if(p==1 && f==1)
+                    document.getElementById('demo').innerHTML+=i+'<br>';
+            }
+        }
+    </script>
+    <style>
+        div {
+                width: 600px;
+                padding: 20px;
+                background-color: #AAF1D0;
+                margin-top: 200px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 200px;
+                border: 6px solid #B2C248;
+                border-radius: 25px;
+                text-align: center;
+                font-family: comic sans ms;
+                font-size: 25px;
+                letter-spacing: 5px;
+                color: green;
+            }
+        div:hover {
+                        box-shadow: 4px 8px 4px 8px rgb(100, 125, 100);
+                  }
+        p {
+                color: purple;
+          }
+    </style>
+</head>
+<body bgcolor="#B4CEFC">
+    <div>
+        <form id="Form" action="POST">
+            <center>
+                <label for="T1">Enter Lower Limit:</label>
+                <input type="text" name="T1" id="text" size="30" style="margin-left: 30px;">
+                <br><br>
+                <label for="T2">Enter Upper Limit:</label>
+                <input type="text" name="T2" id="text" size="30" style="margin-left: 30px;">
+                <br><br>
+                <input type="button" value="Generate Fibonnaci-Prime Series" onclick="fibon_prime();" style="background-color: rgb(59, 155, 59); margin-right: 30px;">
+                <input type="reset" value="Reset" style="background-color: rgb(73, 59, 155);">
+                <p id="demo"></p>
+            </center>
+        </form>
+    </div>
+</body>
+</html>
